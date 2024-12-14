@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class form6 {
+public class form6 extends JFrame {
     public JPanel mainPanel6;
     private JTextField textField1;
     private JButton enterButton;

@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class form3 {
+public class form3 extends  JFrame{
     public JPanel mainPanel3;
     private JButton OKButton;
 
@@ -15,7 +15,13 @@ public class form3 {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                System.exit(0);  // Finalizar_Todo
+                form1 fords = new form1();
+                fords.iniciarLogin();
+
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(OKButton);
+                frame.dispose();
+
+                //System.exit(0);  // Finalizar_Todo
 
 
             }

@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class form2 {
+public class form2 extends  JFrame {
     private JButton btnVerSaldo;
     private JButton btnRetiro;
     private JButton btnDeposito;
@@ -32,6 +32,8 @@ public class form2 {
                 form3 fords = new form3();
                 fords.iniciarGracias();
 
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(btnSalir);
+                frame.dispose();
 
 
                 //System.exit(0);  // Finalizar_Todo

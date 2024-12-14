@@ -1,12 +1,11 @@
 
 
-import com.sun.tools.javac.Main;
-
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class form1 {
+public class form1 extends JFrame {
     public JPanel mainPanel;
     private JTextField usuarioTextField;
     private JPasswordField contraseniaPasswordField;
@@ -30,6 +29,9 @@ public class form1 {
 
             mensajeLabel.setText("Acceso Correcto :)");
 
+            JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(loginButton);
+            frame.dispose();
+
 
         } else {
             form7 fords = new form7();
@@ -41,6 +43,24 @@ public class form1 {
 
 
     }
+
+
+    public void iniciarLogin() {
+
+
+        JFrame frame = new JFrame("Aplicación Pantalla de Login");
+        frame.setContentPane(new form1().mainPanel);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //que es lo que pasa cuando cierro el formulario
+        frame.setSize(800,600);                     //seteo del tamaño
+        frame.setPreferredSize(new Dimension(800,600));    //seteo del tamaño preferido
+        frame.pack();
+        frame.setVisible(true);   //para visualizar una nueva ventana
+
+    }
+
+
+
 
 
     //Funcionalidad para el boton login
